@@ -1,0 +1,1 @@
+this project is on C basics doing if else statments with varibales
