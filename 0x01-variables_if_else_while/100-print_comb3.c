@@ -15,12 +15,20 @@ int main(void)
 		while (b < 57)
 		{
 			b++;
+			if (a > b)
+			{
+				continue;
+			}
 			if (a == b)
 			{
 				continue;
 			}
 			putchar (a);
 			putchar (b);
+			if (a == 56 && b == 57)
+			{
+				break;
+			}
 			putchar (',');
 			putchar (' ');
 		}
