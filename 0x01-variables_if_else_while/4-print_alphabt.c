@@ -6,12 +6,16 @@
  */
 int main(void)
 {
-	int n = 97;
+	int n = 96;
 
-	while (n < 123)
+	while (n < 122)
 	{
+		++n;
+		if (n == 101 || n == 113)
+		{
+			continue;
+		}
 		putchar(n);
-		n++;
 	}
 	putchar('\n');
 
