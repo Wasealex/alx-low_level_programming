@@ -20,9 +20,17 @@ int main(void)
 				while (c < 57)
 				{
 					c++;
+					if (a == b || b == c || a == c || a > b || b > c || a > c)
+					{
+						continue;
+					}
 					putchar(a);
 					putchar(b);
 					putchar(c);
+					if (a == 55 && b == 56 && c == 57)
+					{
+						break;
+					}
 					putchar(',');
 					putchar(' ');
 				}
