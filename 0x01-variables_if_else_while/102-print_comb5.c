@@ -5,20 +5,16 @@
  */
 int main(void)
 {
-	int a, b, c, d = a = b = c = d = 47;
+	int a, b, c, d;
 
-	while (a < 57)
+	for (a = 48; a < 58; a++)
 	{
-		a++;
-		while (b < 57)
+		for (b = 48; b < 58; b++)
 		{
-			b++;
-			while (c < 57)
+			for (c = 48; c < 58; c++)
 			{
-				c++;
-				while (d < 57)
+				for (d = 48; d < 58; d++)
 				{
-					d++;
 					if (a == c && b == d)
 					{
 						continue;
@@ -43,11 +39,8 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 				}
-				d = 47;
 			}
-			c = 47;
 		}
-		b = 47;
 	}
 	putchar('\n');
 	return (0);
