@@ -1,4 +1,5 @@
-this project is on C basics doing if else statments with varibales0-positive_or_negative.c
+this project is on C basics doing if else statments with varibales
+0-positive_or_negative.c
 100-print_comb3.c
 101-print_comb4.c
 102-print_comb5.c
