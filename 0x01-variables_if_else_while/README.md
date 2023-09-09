@@ -12,3 +12,6 @@ this project is on C basics doing if else statments with varibales
 7-print_tebahpla.c(man ascii-> )
 8-print_base16.c(man ascii-> )
 9-print_comb.c(man ascii-> )
+*
+!.gitignore
+!*.c
