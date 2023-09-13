@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  *print_to_98 - prints number from given n number to 98
  *@n: number to be started from
@@ -7,20 +8,20 @@
  */
 void print_to_98(int n)
 {
-	int a, b;
-
-	for (a = n; a <= 9; a++)
+	if (n < 98)
 	{
-		for (b = 0; b <= 9; b++)
+		for (n = n; n <= 98; n++)
 		{
-			_putchar(a + '0');
-			_putchar(b + '0');
-			if (a == 9 && b == 8)
-			{
-				break;
-			}
-			_putchar(',');
-			_putchar(' ');
+			printf("%i, ", n);
 		}
+		printf("%d\n", 98);
+	}
+	else
+	{
+		for (n = n; n >= 98; n--)
+		{
+			printf("%i, ", n);
+		}
+		printf("%d\n", 98);
 	}
 }
