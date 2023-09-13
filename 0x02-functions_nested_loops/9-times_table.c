@@ -15,7 +15,7 @@ void times_table(void)
 		for (b = 0; b < 10; b++)
 		{
 			pr = a * b;
-			if (pr <=9)
+			if (pr <= 9)
 			{
 				_putchar(pr + '0');
 			}
@@ -29,6 +29,7 @@ void times_table(void)
 				break;
 			}
 			_putchar(',');
+			_putchar(' ');
 			_putchar(' ');
 		}
 		_putchar('\n');
