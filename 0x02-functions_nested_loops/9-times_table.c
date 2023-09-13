@@ -34,8 +34,10 @@ void times_table(void)
 				_putchar(pr / 10 + '0');
 				_putchar(pr % 10 + '0');
 				if (b < 9)
-				_putchar(',');
-				_putchar(' ');
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 		}
 		_putchar('\n');
