@@ -18,7 +18,7 @@ void times_table(void)
 			if (pr <= 9)
 			{
 				_putchar(pr + '0');
-				if (a <=9 && b == 9)
+				if (a <= 9 && b == 9)
 				{
 					break;
 				}
