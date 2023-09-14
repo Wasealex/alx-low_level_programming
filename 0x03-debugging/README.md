@@ -1,0 +1,1 @@
+this is a project to be done on debugging with the rubber duck
