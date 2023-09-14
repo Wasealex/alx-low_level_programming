@@ -8,7 +8,7 @@
 int main(void)
 {
         int first, second, series;
-	long long int sum;
+	long int sum;
 
 	first = 1;
 	second = 2;
@@ -20,7 +20,7 @@ int main(void)
 		sum = first + second;
 		first = second;
 		second = sum;
-		printf("%lld, ", sum);
+		printf("%ld, ", sum);
 	}
 	printf("\n");
 
