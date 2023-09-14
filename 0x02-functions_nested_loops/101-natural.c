@@ -10,11 +10,11 @@ int main(void)
 
 	sum = 0;
 
-	for (a = 0; a < 1024; a++)
+	for (a = 1; a < 1024; a++)
 	{
 		b = a % 3;
 		c = a % 5;
-		if (b == 0 && c == 0)
+		if (b == 0 || c == 0)
 		{
 			sum = sum + a;
 		}
