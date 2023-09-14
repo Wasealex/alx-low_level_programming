@@ -9,18 +9,21 @@ int main(void)
 {
 	int first, second, third, sum;
 
+	first = 1;
+	second = 2;
+
 	sum = 0;
 
-	for(; third < 4000000; )
+	for (; third < 4000000;)
 	{
 		third = first + second;
 		first = second;
 		second = third;
+		if (third % 2 == 0)
+		{
+			sum = sum + third;
+		}
 	}
-	if (third % 2 == 0)
-	{
-		sum = sum + third;
-	}
-	printf("%d", sum);
+	printf("%d\n", sum);
 	return (0);
 }
