@@ -7,15 +7,28 @@
  */
 void more_numbers(void)
 {
-	int a, series;
+	int first, second, last, series;
 
-	for (series = 0; series <= 10; series++)
+	last = 0;
+	for (series = 0; series < 10; series++)
 	{
-		for (a = 0; a < 15; a++)
+
+		while (last < 15)
 		{
-			_putchar((a % 10) + '0');
-			_putchar(a / 10 + '0');
+			if (last < 10)
+			{
+				second = last;
+			}
+			else
+			{
+				first = last / 10;
+				second = last % 10;
+				_putchar(first + '0');
+			}
+			_putchar(second + '0');
+			last++;
 		}
+		last = 0;
 		_putchar('\n');
 	}
 }
