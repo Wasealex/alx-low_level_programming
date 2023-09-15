@@ -7,13 +7,13 @@
 int main(void)
 {
 	int a;
-	long b = 612852475143;
+	int b = 6;
 
-	for (a = 0; a < b; a++)
+	for (a = 3; a < b; a++)
 	{
-		if (b % a == 0)
+		if (a % 2 == 0)
 		{
-			printf("%d\n", a);
+			printf("%d \n", a);
 		}
 	}
 
