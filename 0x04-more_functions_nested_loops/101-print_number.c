@@ -28,9 +28,18 @@ void print_number(int n)
 		_putchar((n % 100) / 10 + '0');
 		_putchar(n % 10 + '0');
 	}
-	else
+	else if (n / 100000 == 0)
 	{
 		_putchar(n / 10000 + '0');
+		_putchar((n % 10000) / 1000 + '0');
+		_putchar((n % 1000) / 100 + '0');
+		_putchar((n % 100) / 10 + '0');
+		_putchar(n % 10 + '0');
+	}
+	else
+	{
+		_putchar(n / 100000 + '0');
+		_putchar((n % 100000) / 10000 + '0');
 		_putchar((n % 10000) / 1000 + '0');
 		_putchar((n % 1000) / 100 + '0');
 		_putchar((n % 100) / 10 + '0');
