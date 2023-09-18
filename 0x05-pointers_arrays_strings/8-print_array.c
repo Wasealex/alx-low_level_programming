@@ -9,13 +9,11 @@ void print_array(int *a, int n)
 {
 	int index, temp;
 
-	for (index = 0; index <= n; index++)
+	for (index = 0; index < n; index++)
 	{
-		temp = a[n];
-		a[n] = a[index];
-		a[index] = temp;
-		printf ("%d", temp);
-		if (index != n)
+		temp = a[index];
+		printf("%d", temp);
+		if (index != n - 1)
 		{
 			printf(", ");
 		}
