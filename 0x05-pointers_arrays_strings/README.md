@@ -1,0 +1,1 @@
+this is project is about pointers and arrays
