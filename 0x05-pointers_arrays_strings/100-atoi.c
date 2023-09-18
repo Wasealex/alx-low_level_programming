@@ -9,9 +9,8 @@ int _atoi(char *s)
 	int a, temp;
 
 	for (a = 0; s[a] != '\0'; a++)
+	{
 		temp = s[a];
-	if (temp != 0)
-		return (temp);
-	else
-		return (0);
+	}
+	return (temp);
 }
