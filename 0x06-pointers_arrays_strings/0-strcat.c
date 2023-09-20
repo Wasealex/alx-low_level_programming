@@ -1,4 +1,4 @@
-#inlcude "main.h"
+#include "main.h"
 /**
  *_strcat - concantenate to strings
  *@dest: a string of destination
@@ -9,6 +9,8 @@ char *_strcat(char *dest, char *src)
 {
 	int i, dl, sl;
 
+	dl = sl = 0;
+
 	for (i = 0; dest[i] != '\0'; i++)
 	{
 		dl++;
@@ -17,8 +19,9 @@ char *_strcat(char *dest, char *src)
 	{
 		sl++;
 	}
-	for (i = 0; i < sl; i++)
+	for (i = 0; i <= sl; i++)
 	{
 		dest[i + dl] = src[i];
 	}
+	return (dest);
 }
