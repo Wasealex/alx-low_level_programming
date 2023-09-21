@@ -16,5 +16,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (size_r >= 0)
 			r[i] = n1[i] + n2[i];
 	}
-	return (r)
+	return (r);
 }
