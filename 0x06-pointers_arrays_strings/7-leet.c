@@ -18,10 +18,6 @@ char *leet(char *s)
 		{
 			s[i] = '3';
 		}
-		while (s[i] == 'o' || s[i] == 'O')
-		{
-			s[i] = '0';
-		}
 	}
 	return (s);
 }
