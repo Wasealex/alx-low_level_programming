@@ -7,17 +7,14 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, sum1, sum2;
-
-	sum1 = sum2 = 0;
+	int i;
 
 	for (i = 0; s1[i] != '\0'; i++)
 	{
-		sum1 = sum1 + s1[i];
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 	}
-	for (i = 0; s2[i] != '\0'; i++)
-	{
-		sum2 = sum2 + s2[i];
-	}
-	return (sum1 - sum2);
+	return (0);
 }
