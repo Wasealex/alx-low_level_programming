@@ -15,6 +15,10 @@ char *rot13(char *s)
 		{
 			s[i] = s[i] - 13;
 		}
+		while (s[i] <= 'm' && s[i] >= 'a')
+		{
+			s[i] = s[i] + 13;
+		}
 	}
 	return (s);
 }
