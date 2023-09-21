@@ -4,7 +4,7 @@
  *@n1: first intiger
  *@n2: second intiger
  *@r: result
- *@sizer_r: buffer size
+ *@size_r: buffer size
  *Return: pointer to char
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
