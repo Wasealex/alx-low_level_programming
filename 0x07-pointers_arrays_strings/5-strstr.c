@@ -12,13 +12,13 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if (needle[i] == haystack[i])
+		if (haystack[i] == needle[i])
 		{
 			a = i;
 		}
 	}
-	if (a == 0 && (needle[0] != haystack[0]))
-		return (NULL);
+	if (a == 0)
+		return (0);
 	else
-		return (needle);
+		return (haystack);
 }
