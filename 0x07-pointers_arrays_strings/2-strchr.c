@@ -7,8 +7,14 @@
  */
 char *_strchr(char *s, char c)
 {
-	if (*s == c)
-		return (s + 1);
-	else
-		return (s);
+	int i, a;
+
+	a = 0;
+
+	for (i = 0; s[i] != '\0';i++)
+	{
+		if (s[i] == c)
+			a = i;
+	}
+	return (s + a - 1);
 }
