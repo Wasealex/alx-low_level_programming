@@ -13,10 +13,13 @@ char *_strchr(char *s, char c)
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
+		{
 			a = i;
+			break;
+		}
 	}
 	if (a == 0)
 		return (NULL);
 	else
-		return (s + a - 1);
+		return (s + a);
 }
