@@ -9,7 +9,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int i, j;
-	unsigned int count = 0;
+	unsigned int count = 1;
 
 	for (i = 0; accept[i] != '\0'; i++)
 	{
@@ -22,5 +22,5 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 	}
-	return (count + 1);
+	return (count);
 }
