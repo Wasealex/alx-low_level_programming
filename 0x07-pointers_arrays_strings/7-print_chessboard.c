@@ -2,7 +2,7 @@
 #include "main.h"
 /**
  *print_chessboard - function that prints chessboard
- *@board: matrix array
+ *@a: matrix array
  *
  *Return: 0 if success
  */
