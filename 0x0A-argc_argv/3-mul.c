@@ -6,7 +6,7 @@
  *Return: 0 if success
  *return 1 and print ERROR otherwise
  */
-int main(int argc, char**argv)
+int main(int argc, char **argv)
 {
 	if (argc == 1)
 	{
