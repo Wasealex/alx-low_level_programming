@@ -7,18 +7,20 @@
  */
 int main(int argc, char **argv)
 {
-	int sum, i;
+	int sum, i, num;
 
 	sum = 0;
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]))
+		num = atoi(argv[i]);
+		if (num)
 		{
-			sum += atoi(argv[i]);
+			sum = sum + num;
 		}
 		else
-		{	printf("Error\n");
+		{
+			printf("Error\n");
 			return (1);
 		}
 	}
