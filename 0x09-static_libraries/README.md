@@ -1,0 +1,1 @@
+this project is about statics library create and use
