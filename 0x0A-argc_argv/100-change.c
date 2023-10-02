@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 		count = count + (cents / coin[i]);
 		cents = cents % coin[i];
 	}
-	if (cents < 0)
+	if (cents < 0 || count < 0)
 		printf("0\n");
 	else
 		printf("%d\n", count);
