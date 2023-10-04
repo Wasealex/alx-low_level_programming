@@ -12,6 +12,9 @@ int **alloc_grid(int width, int height)
 	int **darr;
 	int *ptr;
 
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
 	len = 0;
 
 	len = sizeof(int *) * height + sizeof(int) * width * height;
