@@ -7,8 +7,6 @@
  */
 void free_grid(int **grid, int height)
 {
-	int i;
-
-	for (i = 0; i < height / 3; i++)
-		free(grid);
+	grid = malloc(sizeof(grid) * height);
+	free(grid);
 }
