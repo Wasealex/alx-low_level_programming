@@ -10,7 +10,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	char *s, *tmp;
 
-	s = malloc(sizeof(*s) * 5000);
+	s = malloc(sizeof(*s) * 4156);
 	if (s == NULL)
 		return (NULL);
 	if (ac == 0 || av == NULL)
