@@ -9,16 +9,16 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	char *ptr1;
-	char *ptr2;
 
-	ptr1 = malloc(old_size);
-	ptr2 = malloc(new_size);
-	if (ptr == NULL || ptr1 == NULL || ptr2 == NULL)
+	ptr = malloc(old_size);
+	ptr1 = malloc(new_size);
+	if (ptr == NULL || ptr1 == NULL)
 		return (NULL);
 
 	if (new_size > old_size)
 	{
-		ptr = ptr2;
+		ptr = ptr1;
+		return (ptr1);
 	}
 	if (new_size == old_size)
 	{
