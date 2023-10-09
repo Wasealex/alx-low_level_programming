@@ -1,0 +1,1 @@
+this project is more in typedef and structures
