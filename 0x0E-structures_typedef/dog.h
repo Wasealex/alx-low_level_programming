@@ -1,5 +1,10 @@
 #ifndef _dog_h_
 #define _dog_h_
+/*header files*/
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 /*structure */
 /**
  *struct dog - defines information of dog with dog owner
