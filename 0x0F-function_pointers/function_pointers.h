@@ -6,4 +6,5 @@
 #include <unistd.h>
 #include <string.h>
 /*prtotype*/
+void print_name(char *name, void (*f)(char *));
 #endif /*function_pointers.h*/
