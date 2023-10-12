@@ -10,7 +10,7 @@ void print_all(const char * const format, ...)
 	char c;
 	int i;
 	float f;
-	char * s;
+	char *s;
 	const char *ptr = format;
 
 	va_start(args, format);
@@ -42,9 +42,7 @@ void print_all(const char * const format, ...)
 		}
 		ptr++;
 		if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
-		{
 			printf(", ");
-		}
 	}
 	printf("\n");
 	va_end(args);
