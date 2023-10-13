@@ -16,33 +16,31 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (*ptr)
 	{
-		switch (*ptr)
+		if (*ptr == 'c')
 		{
-		case 'c':
 			c = (char)va_arg(args, int);
 			printf("%c", c);
-			break;
-		case 'i':
+		}
+		else if (*ptr == 'i')
+		{
 			i = (int)va_arg(args, int);
 			printf("%d", i);
-			break;
-		case 'f':
+		}
+		else if (*ptr == 'f')
+		{
 			f = (double)va_arg(args, double);
 			printf("%f", f);
-			break;
-		case 's':
+		}
+		else if (*ptr == 's')
+		{
 			s = va_arg(args, char *);
-			if (s != NULL)
-				printf("%s", s);
-			else
-				printf("(nil)");
-			break;
-		default:
-			break;
+			printf("%s", s);
 		}
 		ptr++;
 		if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
+		{
 			printf(", ");
+		}
 	}
 	printf("\n");
 	va_end(args);
