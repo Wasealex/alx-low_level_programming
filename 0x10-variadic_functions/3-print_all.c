@@ -34,8 +34,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(args, char *);
-				if (s != NULL)
-					printf("%s", s);
+				printf("%s", s);
 			}
 			ptr++;
 			if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
