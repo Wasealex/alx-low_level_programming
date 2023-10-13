@@ -38,11 +38,11 @@ void print_all(const char * const format, ...)
 				break;
 			}
 			ptr++;
+			if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
+			{
+				printf(", ");
+			}
 		}
-	}
-	if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
-	{
-		printf(", ");
 	}
 	printf("\n");
 	va_end(args);
