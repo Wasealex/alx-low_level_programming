@@ -36,9 +36,6 @@ void print_all(const char * const format, ...)
 				s = va_arg(args, char *);
 				if (s != NULL)
 					printf("%s", s);
-				else
-					printf("(nil)");
-				break;
 			}
 			ptr++;
 			if (*ptr && (*ptr == 'c' || *ptr == 'i' || *ptr == 'f' || *ptr == 's'))
