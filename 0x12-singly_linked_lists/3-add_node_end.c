@@ -10,6 +10,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *first;
 	list_t *last;
 
+	if (str == NULL)
+		return (NULL);
+
 	first = malloc(sizeof(list_t));
 	if (first == NULL)
 		return (NULL);
