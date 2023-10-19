@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *before_main - print before main function
- *
+ *Return: 0 if successfull
  */
 int before_main(void) __attribute__((constructor));
 int before_main(void)
