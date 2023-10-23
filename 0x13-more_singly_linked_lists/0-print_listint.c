@@ -12,7 +12,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *tmp;
 
 	tmp = h;
-
+	count = 0;
 	while (tmp != NULL)
 	{
 		count++;
