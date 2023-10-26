@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *fet_endianness - checks the order of stored in memory
+ *get_endianness - checks the order of stored in memory
  *big endiannes stores most significant byte in small address
  *little endiannes stores least signigicant byte in smallest address
  *Return: 0 for the first 1 for the second
