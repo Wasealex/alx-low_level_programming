@@ -16,5 +16,5 @@ int create_file(const char *filename, char *text_content)
 	if (fd2 == -1 || fd0 == -1)
 		return (-1);
 	close(fd0);
-	return (0);
+	return (1);
 }
