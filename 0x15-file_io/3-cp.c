@@ -25,15 +25,15 @@ int main(int argc, char *argv[])
 	file_to = argv[2];
 
 	fdfrom = open(file_from, O_RDONLY);
-	fdto = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	fdto = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fdfrom == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (fdto == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
@@ -42,13 +42,13 @@ int main(int argc, char *argv[])
 		writes = write(fdto, buffer, reads);
 		if (writes == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (reads == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 		exit(98);
 	}
 	if (close(fdfrom) == -1)
