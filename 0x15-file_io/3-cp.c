@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		puts("Usage: cp file_from file_to");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 		exit(97);
 	}
 	file_from = argv[1];
