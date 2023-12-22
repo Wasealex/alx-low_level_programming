@@ -17,15 +17,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	key_copy = strdup(key);
 	value_copy = strdup(value);
 	if (value_copy == NULL)
+	{
+		free(key_copy);
 		return (0);
+	}
 	new_pair = malloc(sizeof(hash_node_t));
 	if (new_pair == NULL)
+	{
+		free(key_copy);
+		free(value_copy);
 		return (0);
+	}
 	new_pair->key = key_copy;
 	new_pair->value = value_copy;
 	new_pair->next = NULL;
-	/*assign the index to the row_number of the table*/
-	row_number = key_index((const unsigned char *)key, ht->size);
+	row_number = key_index((const unsigned char *)key, ht->size);/*assign*/
 	if (ht->array[row_number] == NULL)/*if it is empty insert directly*/
 	{
 		ht->array[row_number] = new_pair;
@@ -40,6 +46,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{/*key already exist, update value*/
 				free(current->value);
 				current->value = value_copy;
+				free(key_copy);
+				free(new_pair);
 				return (1);
 			}
 			current = current->next;
