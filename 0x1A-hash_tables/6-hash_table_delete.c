@@ -16,8 +16,6 @@ void hash_table_delete(hash_table_t *ht)
 		free(ht);
 		return;
 	}
-
-	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		current = ht->array[i];
