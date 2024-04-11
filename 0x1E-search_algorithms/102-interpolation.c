@@ -7,7 +7,7 @@
  *Return: returns the index found of the value otherwise -1
  *size_t pos = low +
  *                  (((double)(high - low) /
- *                           (array[high] - array[low])) * (value - array[low]))
+ *                  (array[high] - array[low])) * (value - array[low]))
  */
 int interpolation_search(int *array, size_t size, int value)
 {
@@ -19,7 +19,8 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 	while (low <= high)
 	{
-		pos = low + (((high - low) / (array[high] - array[low])) * (value - array[low]));
+		pos = low + (((high - low) /
+			      (array[high] - array[low])) * (value - array[low]));
 
 		if (pos >= size)
 		{
